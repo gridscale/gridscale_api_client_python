@@ -9,5 +9,6 @@ INCORRECT_CODE_METHODS = {
     'update_server_power',
     'delete_isoimage',
     'delete_template',
-    'delete_paas_service'
+    'delete_paas_service',
+    'delete_loadbalancer'
 }
