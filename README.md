@@ -247,6 +247,7 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 ## Labels
 
 - get_labels
+- get_label
 - create_label
 - delete_label
 
