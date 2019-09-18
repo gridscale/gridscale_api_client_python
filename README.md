@@ -123,7 +123,7 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 - get_server_linked_networks
 - get_server_linked_storage
 - get_server_linked_storages
-- link_ip_to_server',
+- link_ip_to_server
 - link_isoimage_to_server
 - link_network_to_server
 - link_storage_to_server
@@ -247,6 +247,7 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 ## Labels
 
 - get_labels
+- get_label
 - create_label
 - delete_label
 
