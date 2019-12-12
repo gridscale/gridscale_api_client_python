@@ -999,6 +999,113 @@ class PaasApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def renew_paas_service_credentials(self, paas_service_uuid, payload, **kwargs):  # noqa: E501
+        """Renew PaaS credentials  # noqa: E501
+
+        https://api.gridscale.io/objects/paas/services/{paas_service_uuid}/renew_credentials Renew credentials of PaaS service. Credentials of a PaaS service will be renewed (if supported by service template). Updated credentials can be found in attribute `credentials` of service, once request processing has finished.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.renew_paas_service_credentials(paas_service_uuid, payload, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str paas_service_uuid: object that need to be updated. (required)
+        :param object payload: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.renew_paas_service_credentials_with_http_info(paas_service_uuid, payload, **kwargs)  # noqa: E501
+        else:
+            (data) = self.renew_paas_service_credentials_with_http_info(paas_service_uuid, payload, **kwargs)  # noqa: E501
+            return data
+
+    def renew_paas_service_credentials_with_http_info(self, paas_service_uuid, payload, **kwargs):  # noqa: E501
+        """Renew PaaS credentials  # noqa: E501
+
+        https://api.gridscale.io/objects/paas/services/{paas_service_uuid}/renew_credentials Renew credentials of PaaS service. Credentials of a PaaS service will be renewed (if supported by service template). Updated credentials can be found in attribute `credentials` of service, once request processing has finished.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.renew_paas_service_credentials_with_http_info(paas_service_uuid, payload, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str paas_service_uuid: object that need to be updated. (required)
+        :param object payload: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['paas_service_uuid', 'payload']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method renew_paas_service_credentials" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'paas_service_uuid' is set
+        if ('paas_service_uuid' not in params or
+                params['paas_service_uuid'] is None):
+            raise ValueError("Missing the required parameter `paas_service_uuid` when calling `renew_paas_service_credentials`")  # noqa: E501
+        # verify the required parameter 'payload' is set
+        if ('payload' not in params or
+                params['payload'] is None):
+            raise ValueError("Missing the required parameter `payload` when calling `renew_paas_service_credentials`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'paas_service_uuid' in params:
+            path_params['paas_service_uuid'] = params['paas_service_uuid']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'payload' in params:
+            body_params = params['payload']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['API_Token', 'User_UUID']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/objects/paas/services/{paas_service_uuid}/renew_credentials', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def update_paas_security_zone(self, paas_security_zone_uuid, payload, **kwargs):  # noqa: E501
         """Security Zone Patch  # noqa: E501
 
