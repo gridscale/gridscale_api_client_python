@@ -1,3 +1,4 @@
+import uuid
 from abc import ABC, abstractmethod
 
 from gs_api_client.base.constants import REQUEST_UUID_RESPONSE_HEADER
@@ -22,6 +23,8 @@ class ApiRequestDispatcherBase(ABC):
 
     def dispatch(self):
         self._fetch_method()
+        if self._is_request_arg_contain_uuid():
+            self._uuid_to_string_for_request_args()
         try:
             self._try_to_dispatch()
         except ApiClientError:
@@ -40,6 +43,14 @@ class ApiRequestDispatcherBase(ABC):
             if self._result_as_dict_requested() and self._result_is_model():
                 self._adapt_result_to_dict()
             return self._result
+
+    def _is_request_arg_contain_uuid(self):
+        for arg in self._request_args:
+            if isinstance(arg, uuid.UUID):
+                return True
+
+    def _uuid_to_string_for_request_args(self):
+        self._request_args = [str(o) if isinstance(o, uuid.UUID) else o for o in self._request_args]
 
     @abstractmethod
     def _try_to_dispatch(self):
