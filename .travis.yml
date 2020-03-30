@@ -6,6 +6,8 @@ python:
 virtualenv:
   system_site_packages: true
 
+install:
+  - pip install --upgrade pip==9.0.1
 jobs:
   include:
     - stage: check_release_steps
