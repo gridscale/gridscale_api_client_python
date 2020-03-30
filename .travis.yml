@@ -3,6 +3,8 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
+virtualenv:
+  system_site_packages: true
 
 jobs:
   include:
