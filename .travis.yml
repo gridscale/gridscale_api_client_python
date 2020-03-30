@@ -3,6 +3,7 @@ language: python
 jobs:
   include:
     - stage: check_release_steps
+      scripts: echo "Checking release version $(python setup.py --version)"
       script: if git tag | grep -qE "^v$(python setup.py --version)$"; then echo "Release already exists"; exit 1; fi
-
+      scripts : if ! grep -q "v$(python setup.py --version)" CHANGELOG.md; then echo "Version missing in CHANGELOG.md"; exit 1; fi
 
