@@ -1,5 +1,5 @@
 language: python
-
+os: linux
 jobs:
   include:
     - stage: check_release_steps
