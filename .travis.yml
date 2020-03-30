@@ -1,12 +1,8 @@
 language: python
-python:
-  - "3.4"
-  - "3.5"
-  - "3.6"
 
 jobs:
   include:
     - stage: check_release_steps
-      script: echo "hoi"
+      script: if git tag | grep -qE "^v$(python setup.py --version)$"; then echo "Release already exists"; exit 1; fi
 
 
