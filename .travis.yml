@@ -4,5 +4,5 @@ install: skip
 jobs:
   include:
     - stage: check_release_steps
-      scripts: "./check_release_step.sh"
+      scripts: "./.travis/check_release_step.sh"
 
