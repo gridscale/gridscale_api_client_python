@@ -1,5 +1,6 @@
 language: python
 os: linux
+install: skip
 jobs:
   include:
     - stage: check_release_steps
