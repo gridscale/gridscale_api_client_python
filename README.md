@@ -142,6 +142,7 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 - create_storage
 - delete_storage
 - get_deleted_storages
+- storage_clone
 - storage_rollback
 - update_storage
 - get_storage_events
@@ -208,6 +209,7 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 - update_loadbalancer
 - delete_loadbalancer
 - get_loadbalancer_events
+- get_deleted_loadbalancers
 
 ## PaaS
 
@@ -216,6 +218,7 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 - create_paas_service
 - update_paas_service
 - delete_paas_service
+- renew_paas_service_credentials
 - get_paas_service_metrics
 - get_paas_security_zones
 - get_paas_security_zone
@@ -248,8 +251,6 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 
 - get_labels
 - get_label
-- create_label
-- delete_label
 
 ## SSH Keys
 
