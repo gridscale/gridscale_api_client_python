@@ -281,3 +281,16 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 - get_access_key
 - create_access_key
 - delete_access_key
+
+## Development
+
+Create a virtual environment with all necessary dependencies and run the tests as follows:
+
+```shell
+$ python -m venv .venv
+$ source .venv/bin/activate
+$ python -m pip install -r dev-requirements.txt
+$ pytest
+```
+
+Have fun!
