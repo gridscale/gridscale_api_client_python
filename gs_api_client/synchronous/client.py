@@ -8,7 +8,7 @@ class SyncGridscaleApiClient(GridscaleApiClientBase):
         request_provider = RequestProvider(
             self,
             self.http_info)
-        for name, api_class in self._api_registry:
+        for _, api_class in self._api_registry:
             api = SyncApi(
                 self.api_client,
                 api_class,
