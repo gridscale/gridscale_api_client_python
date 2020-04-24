@@ -2,6 +2,6 @@
 
 echo "Building version $(python setup.py --version)"
 
-pip install dist/gs_api_client-$(python setup.py --version).tar.gz
+python setup.py sdist bdist_wheel
 
 echo "Building Done"

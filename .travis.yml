@@ -7,7 +7,3 @@ jobs:
       scripts: "./.travis/check_release_step.sh"
     - stage: build
       scripts: "./.travis/build.sh"
-addons:
-  artifacts:
-    working_dir: dist/
-    target_paths: ${ARTIFACTS_JOB_ID}/${TRAVIS_OS_NAME}/${TRAVIS_COMMIT:0:8}
