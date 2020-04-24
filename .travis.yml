@@ -4,6 +4,8 @@ install: skip
 jobs:
   include:
     - stage: check_release_steps
-      scripts: "./.travis/check_release_step.sh"
+      scrips: "./.travis/check_release_step.sh"
     - stage: build
-      scripts: "./.travis/build.sh"
+      script: "./.travis/build.sh"
+    - stage: test_package
+      script: "./.travis/test_sdist_package.sh"
