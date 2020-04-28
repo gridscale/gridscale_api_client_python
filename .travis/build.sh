@@ -4,5 +4,6 @@ echo "Building version $(python setup.py --version)"
 
 python setup.py sdist bdist_wheel
 ls -a
+pwd
 echo "Building Done"
 
