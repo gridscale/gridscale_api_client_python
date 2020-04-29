@@ -1,21 +1,14 @@
 language: python
 os: linux
 
-cache:
-  pip: true
-  directories:
-    - $HOME/buildout-cache
-  timeout: 1000
-
 install: skip
 jobs:
   include:
     - stage: check_release_steps
-      scrips: "./.travis/check_release_step.sh"
+      script: "./.travis/check_release_step.sh"
     - stage: build
       script: "./.travis/build.sh"
-      artifacts:
-        paths:
-          - $HOME/buildout-cache/gs_api_client-$(python setup.py --version).tar.gz
     - stage: test_package
-      script: "./.travis/test_sdist_package.sh"
+      script:
+      - ./.travis/build.sh
+      - ./.travis/test_sdist_package.sh
