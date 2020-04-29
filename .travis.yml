@@ -8,7 +8,11 @@ jobs:
       script: "./.travis/check_release_step.sh"
     - stage: build
       script: "./.travis/build.sh"
-    - stage: test_package
+    - stage: test_sdist_package
       script:
       - ./.travis/build.sh
       - ./.travis/test_sdist_package.sh
+    - stage: test_bdist_wheel_package
+      script:
+      - ./.travis/build.sh
+      - ./.travis/test_sdist_wheel_package.sh
