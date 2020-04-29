@@ -16,3 +16,6 @@ jobs:
       script:
       - ./.travis/build.sh
       - ./.travis/test_sdist_wheel_package.sh
+    - stage: test_unittest
+      script: "./.travis/test_unittest.sh"
+
