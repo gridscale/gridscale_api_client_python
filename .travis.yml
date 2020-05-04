@@ -18,4 +18,6 @@ jobs:
       - ./.travis/test_sdist_wheel_package.sh
     - stage: test_unittest
       script: "./.travis/test_unittest.sh"
+    - stage: upload_to_pypi_org
+      script: "./.travis/upload_to_apipy_org.sh"
 
