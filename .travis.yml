@@ -7,7 +7,7 @@ jobs:
     - stage: check_release_steps
       script: "./.travis/check_release_step.sh"
     - stage: build
-      script: setup.py sdist bdist
+      script: setup.py sdist bdist_wheel
     - stage: test-install-src
       script:
       - setup.py sdist bdist_wheel
