@@ -7,15 +7,15 @@ jobs:
     - stage: check_release_steps
       script: "./.travis/check_release_step.sh"
     - stage: build
-      script: "./.travis/build.sh"
-    - stage: test_sdist_package
+      script: setup.py sdist bdist_wheel
+    - stage: test-install-src
       script:
-      - ./.travis/build.sh
-      - ./.travis/test_sdist_package.sh
-    - stage: test_bdist_wheel_package
+      - setup.py sdist bdist_wheel
+      - pip install dist/gs_api_client-$(python setup.py --version).tar.gz
+    - stage: test-install-wheel
       script:
-      - ./.travis/build.sh
-      - ./.travis/test_sdist_wheel_package.sh
+      - setup.py sdist bdist_wheel
+      - pip install dist/gs_api_client-$(python setup.py --version)-py3-none-any.whl
     - stage: test_unittest
       script: "./.travis/test_unittest.sh"
     - stage: upload_to_pypi_org
