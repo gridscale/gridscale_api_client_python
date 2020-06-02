@@ -8,14 +8,14 @@ jobs:
       script: "./.travis/check_release_step.sh"
     - stage: build
       script:
-        - python setup.py sdist bdist
+        - python setup.py sdist bdist_wheel
     - stage: test-install-src
       script:
         - python setup.py sdist
         - pip install dist/gs_api_client-$(python setup.py --version).tar.gz
     - stage: test-install-wheel
       script:
-        - python setup.py bdist
+        - python setup.py bdist_wheel
         - pip install dist/gs_api_client-$(python setup.py --version)-py3-none-any.whl
     - stage: test_unittest
       script: "./.travis/test_unittest.sh"
