@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 
 from gs_api_client.base.api_registry import ApiRegistry
 from gs_api_client.swagger import ApiClient
+from gs_api_client.base.error import MultipleAuthKeyError
 
 
 class MutableBoolean:
