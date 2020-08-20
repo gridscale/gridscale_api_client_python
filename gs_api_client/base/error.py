@@ -24,3 +24,12 @@ class ApiError(ApiClientError):
             self.code,
             self.reason,
             self.body if len(self.body) < 256 else '{}...'.format(self.body[:256]))
+
+
+class MultipleAuthKeyError(ApiClientError):
+    def __init__(self, code, reason):
+        self.code = code
+        self.reason = reason
+
+    def __str__(self):
+        return f'Request failed with code {self.code}, reason "{self.reason}"'

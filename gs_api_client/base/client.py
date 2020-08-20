@@ -29,6 +29,7 @@ class GridscaleApiClientBase(ABC):
         self.result_as_dict = MutableBoolean(result_as_dict)
         self._api_method_index = {}
         self._setup_apis()
+        self.check_multiple_auth_key()
 
     def __dir__(self):
         return list(self.__dict__.keys()) + list(self._api_method_index.keys())
@@ -36,6 +37,13 @@ class GridscaleApiClientBase(ABC):
     @abstractmethod
     def _setup_apis(self):
         pass
+
+    def check_multiple_auth_key(self):
+
+        api_key = self.api_client.configuration.api_key
+
+        if 'X-Auth-ServiceToken' in api_key and ('X-Auth-Token' in api_key or 'X-Auth-UserId' in api_key):
+            raise MultipleAuthKeyError(code=400, reason='Multiple Authentication key')
 
     def __getattr__(self, name):
         try:
