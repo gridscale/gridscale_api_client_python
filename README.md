@@ -156,6 +156,20 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 - update_storage
 - get_storage_events
 
+### Backups
+
+- get_storage_backups
+- delete_storage_backup
+- rollback_storage_backup
+
+### Storage Backup Schedule
+
+- get_storage_backup_chedules
+- create_storage_backup_schedule
+- get_storage_backup_schedule
+- delete_storage_backup_schedule
+- update_storage_backup_schedule
+
 ### Snapshots
 
 - get_snapshots
@@ -183,12 +197,12 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 
 ### Marketplace templates
 
-- get_marketplace_templates
-- get_marketplace_template
-- create_marketplace_template
-- update_marketplace_template
-- delete_marketplace_template
-- get_marketplace_template_events
+- get_marketplace_applications
+- get_marketplace_application
+- create_marketplace_application
+- update_marketplace_application
+- delete_marketplace_application
+- get_marketplace_application_events
 
 ### Networks
 
