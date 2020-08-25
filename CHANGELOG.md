@@ -16,7 +16,7 @@
 - Add renew_paas_service_credentials() endpoint
 - Remove deprecated create_label() and delete_label() endpoints
 
-## [v1.0.4] 
+## [v1.1.0] 
 
 - Add get_storage_backups()
 - Add delete_storage_backup()
