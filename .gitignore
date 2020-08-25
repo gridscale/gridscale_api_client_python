@@ -24,3 +24,7 @@ var/
 
 # OS
 .DS_Store
+
+# Typical virtual environment dirs
+.venv/
+venv/

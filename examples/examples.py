@@ -40,9 +40,12 @@ if __name__ == '__main__':
         'capacity': 10,
         'location_uuid': location['object_uuid'],
         'storage_type': 'storage_insane',
-        'template_uuid': template['object_uuid'],
-        'hostname': 'myserver',
-        'password': 'secret_pass123!#.,'})
+        'template': {
+            'template_uuid': template['object_uuid'],
+            'hostname': 'myserver',
+            'password': 'secret_pass123!#.,'
+        }
+    })
     storage = create_storage_response['storage']
 
     # create server

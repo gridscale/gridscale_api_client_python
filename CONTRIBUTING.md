@@ -16,6 +16,5 @@ GitHub project.
 
 ## Submitting Patches
 
-The gridscale_api_client_python source code is managed using the git distributed source control 
+The gridscale_api_client_python source code is managed using the git distributed source control
 management tool <https://www.git-scm.org/>. Please submit patches accordingly.
-
