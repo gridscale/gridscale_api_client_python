@@ -195,7 +195,7 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 - get_template_events
 - get_deleted_templates
 
-### Marketplace templates
+### Marketplace applications
 
 - get_marketplace_applications
 - get_marketplace_application
