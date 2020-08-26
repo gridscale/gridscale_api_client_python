@@ -16,7 +16,7 @@
 - Add renew_paas_service_credentials() endpoint
 - Remove deprecated create_label() and delete_label() endpoints
 
-## [v1.0.4] 
+## [v1.1.0] 
 
 - Add get_storage_backups()
 - Add delete_storage_backup()
@@ -32,3 +32,9 @@
 - Replace update_marketplace_template() with update_marketplace_application()
 - Replace delete_marketplace_template() with delete_marketplace_application()
 - Replace get_marketplace_template_events() with get_marketplace_application_events()
+- Update credential attributes in paas_service_add() endpoint
+
+## [v1.1.1] 
+
+- Add missing information in changelog
+- Fix readme
