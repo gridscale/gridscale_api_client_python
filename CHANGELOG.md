@@ -32,3 +32,4 @@
 - Replace update_marketplace_template() with update_marketplace_application()
 - Replace delete_marketplace_template() with delete_marketplace_application()
 - Replace get_marketplace_template_events() with get_marketplace_application_events()
+- Update credential attributes in paas_service_add() endpoint
