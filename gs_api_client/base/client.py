@@ -44,7 +44,8 @@ class GridscaleApiClientBase(ABC):
         api_key = self.api_client.configuration.api_key
 
         if 'X-Auth-ServiceToken' in api_key and ('X-Auth-Token' in api_key or 'X-Auth-UserId' in api_key):
-            raise MultipleAuthKeyError(code=400, reason='Multiple Authentication key')
+            raise MultipleAuthKeyError(code=400, reason='Ambigous authentication method, please provide only one '
+                                                        'method of authentication')
 
     def __getattr__(self, name):
         try:
