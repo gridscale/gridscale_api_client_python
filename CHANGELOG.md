@@ -38,3 +38,7 @@
 
 - Add missing information in changelog
 - Fix readme
+
+## [v1.1.2] 
+
+- Make loadbalancer_update parameters non-required
