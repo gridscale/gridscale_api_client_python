@@ -42,3 +42,7 @@
 ## [v1.1.2] 
 
 - Make loadbalancer_update() parameters non-required
+
+## [v1.1.3] 
+
+- Fix missing depecrated require parameter in loadbalancer_update() schema
