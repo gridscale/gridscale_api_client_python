@@ -41,4 +41,4 @@
 
 ## [v1.1.2] 
 
-- Make loadbalancer_update parameters non-required
+- Make loadbalancer_update() parameters non-required
