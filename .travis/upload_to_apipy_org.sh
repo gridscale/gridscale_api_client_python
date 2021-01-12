@@ -5,6 +5,7 @@ echo "Uploading package to pypi.org"
 ls -l
 
 python setup.py sdist bdist_wheel
+pip install --upgrade pip
 pip install twine
 twine upload -u __token__ -p "$PYPI_ORG_TOKEN" dist/gs_api_client-*
 
