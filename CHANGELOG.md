@@ -46,3 +46,11 @@
 ## [v1.1.3] 
 
 - Fix missing depecrated require parameter in loadbalancer_update() schema
+
+## [v1.1.4] 
+
+- Add create_location()
+- Add delete_location()
+- Add update_location()
+- Update paas_service_update() endpoint to include optional paas_service_template_uuid
+
