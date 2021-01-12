@@ -17,6 +17,7 @@ from gs_api_client.swagger.api.network_api import NetworkApi
 from gs_api_client.swagger.api.object_storage_api import ObjectStorageApi
 from gs_api_client.swagger.api.paas_api import PaasApi
 from gs_api_client.swagger.api.request_api import RequestApi
+from gs_api_client.swagger.api.security_zone_api import SecurityZoneApi
 from gs_api_client.swagger.api.server_api import ServerApi
 from gs_api_client.swagger.api.server_ip_api import ServerIpApi
 from gs_api_client.swagger.api.server_isoimages_api import ServerIsoimagesApi
