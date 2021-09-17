@@ -100,13 +100,6 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 
 - get_locations
 - get_location
-- get_location_ips
-- get_location_isoimages
-- get_location_networks
-- get_location_servers
-- get_location_snapshots
-- get_location_storages
-- get_location_templates
 
 ### Servers
 
@@ -213,6 +206,9 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 - delete_network
 - get_network_events
 - get_deleted_networks
+- get_network_pinned_servers()
+- update_network_pinned_server()
+- delete_network_pinned_server()
 
 ### IP addresses
 
@@ -295,6 +291,38 @@ Inside the [examples.py](examples/examples.py) file, you can see some example re
 - get_access_key
 - create_access_key
 - delete_access_key
+
+### Certificates
+
+- get_certificates()
+- create_certificate()
+- get_certificate()
+- delete_certificate()
+
+### Usages
+
+- project_level_usage_get()
+- project_level_server_usage_get()
+- project_level_distributed_storage_usage_get()
+- project_level_rocket_storage_usage_get()
+- project_level_storage_backup_usage_get()
+- project_level_snapshot_usage_get()
+- project_level_template_usage_get()
+- project_level_isoimage_usage_get()
+- project_level_ip_usage_get()
+- project_level_loadbalancer_usage_get()
+- project_level_paas_service_usage_get()
+- contract_level_usage_get()
+- contract_level_server_usage_get()
+- contract_level_distributed_storage_usage_get()
+- contract_level_rocket_storage_usage_get()
+- contract_level_storage_backup_usage_get()
+- contract_level_snapshot_usage_get()
+- contract_level_template_usage_get()
+- contract_level_isoimage_usage_get()
+- contract_level_ip_usage_get()
+- contract_level_loadbalancer_usage_get()
+- contract_level_paas_service_usage_get()
 
 ## Development
 
