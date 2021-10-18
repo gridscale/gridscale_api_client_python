@@ -5,6 +5,7 @@ from __future__ import absolute_import
 # import apis into api package
 from gs_api_client.swagger.api.location_api import LocationApi
 from gs_api_client.swagger.api.ssh_key_api import SSHKeyApi
+from gs_api_client.swagger.api.certificate_api import CertificateApi
 from gs_api_client.swagger.api.deleted_api import DeletedApi
 from gs_api_client.swagger.api.events_api import EventsApi
 from gs_api_client.swagger.api.firewall_api import FirewallApi
@@ -30,3 +31,4 @@ from gs_api_client.swagger.api.storage_backups_api import StorageBackupsApi
 from gs_api_client.swagger.api.storage_snapshot_api import StorageSnapshotApi
 from gs_api_client.swagger.api.storage_snapshot_schedule_api import StorageSnapshotScheduleApi
 from gs_api_client.swagger.api.template_api import TemplateApi
+from gs_api_client.swagger.api.usage_api import UsageApi
