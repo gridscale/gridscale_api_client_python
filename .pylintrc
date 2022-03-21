@@ -1,4 +1,6 @@
-disable=too-many-instance-attributes,
+[DEFAULT]
+disable=
+    too-many-instance-attributes,
     len-as-condition,
     too-few-public-methods,
     anomalous-backslash-in-string,
