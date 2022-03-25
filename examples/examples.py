@@ -1,8 +1,10 @@
 import sys
+
 from pprint import pprint
 from uuid import uuid4
-from gs_api_client import SyncGridscaleApiClient, GridscaleApiClient, models
 from index_by.key import index_by_key
+
+from gs_api_client import SyncGridscaleApiClient, GridscaleApiClient, models
 from gs_api_client import Configuration
 
 
