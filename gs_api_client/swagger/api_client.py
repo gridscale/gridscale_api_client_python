@@ -51,6 +51,7 @@ class ApiClient(object):
     PRIMITIVE_TYPES = (float, bool, bytes, six.text_type) + six.integer_types
     NATIVE_TYPES_MAPPING = {
         'int': int,
+        'long': int,
         'float': float,
         'str': str,
         'bool': bool,
