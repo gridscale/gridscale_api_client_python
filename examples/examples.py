@@ -1,9 +1,11 @@
-from pprint import pprint
-from gs_api_client import Configuration
-from uuid import uuid4
 import sys
-from gs_api_client import SyncGridscaleApiClient, GridscaleApiClient, models
+
+from pprint import pprint
+from uuid import uuid4
 from index_by.key import index_by_key
+
+from gs_api_client import SyncGridscaleApiClient, GridscaleApiClient, models
+from gs_api_client import Configuration
 
 
 if __name__ == '__main__':
