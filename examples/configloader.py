@@ -1,26 +1,26 @@
 import shutil
-import yaml
 import sys
 import os.path
+import yaml
 
 #TODO: change active project
 project = "somthing-else"
 
 def which_path():
     #check if os is linux
-    if(sys.platform == "linux" or sys.platform == "linux2"):
+    if(sys.platform in ("linux", "linux2")):
         path = "~/.config/gridscale"
         path = os.path.expanduser(path)
         if not os.path.exists(path):
             os.makedirs(path)
     #check if os is windows
-    elif(sys.platform == "win32" or sys.platform == "cygwin" or sys.platform == "msys"):
+    elif(sys.platform in ("win32", "cygwin", "msys")):
         path = "%APPDATA%\gridscale"
         path = os.path.expanduser(path)
         if not os.path.exists(path):
             os.makedirs(path)
     #check if os is mac os
-    elif(sys.platform == "darwin" or sys.platform == "os2" or sys.platform == "os2emx"):
+    elif(sys.platform in ("darwin", "os2", "os2emx")):
         path = "~/Library/Application Support/gridscale"
         path = os.path.expanduser(path)
         if not os.path.exists(path):
@@ -34,7 +34,6 @@ def create_config(path):
     cwd = os.getcwd()
     shutil.copyfile(f"{cwd}/config.yaml", path)
     print(f"New config file created, edit config file at: {path}")
-    return
 
 def load_config(projectname, goal, path):
     with open(f"{path}", 'r') as stream:

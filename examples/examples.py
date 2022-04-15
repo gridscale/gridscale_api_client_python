@@ -3,11 +3,11 @@ import sys
 from pprint import pprint
 from uuid import uuid4
 from index_by.key import index_by_key
+from configloader import load_token, load_userid
 
 from gs_api_client import SyncGridscaleApiClient, GridscaleApiClient, models
 from gs_api_client import Configuration
 
-from configloader import load_token, load_userid
 
 
 if __name__ == '__main__':
