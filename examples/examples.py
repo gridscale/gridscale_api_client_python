@@ -34,7 +34,7 @@ if __name__ == '__main__':
     get_templates_response = client.get_templates()
     templates = get_templates_response['templates'].values()
     template_by_name = index_by_key(templates, 'name')
-    template = template_by_name['Debian 9']
+    template = template_by_name['Debian 11']
 
     # create storage
     create_storage_response = client.create_storage({
