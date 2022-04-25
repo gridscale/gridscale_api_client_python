@@ -1,12 +1,17 @@
 import shutil
 import sys
 import os.path
+import pathlib
 import yaml
 
-#TODO: change active project
-project = "somthing-else"
 
-def which_path():
+def default_config_path():
+    """
+
+    this checks the operation system of the user.
+    this is used to determine the standard save location for the global gridscale config file.
+
+    """
     #check if os is linux
     if(sys.platform in ("linux", "linux2")):
         path = "~/.config/gridscale"
@@ -26,27 +31,32 @@ def which_path():
         if not os.path.exists(path):
             os.makedirs(path)
     else:
-        print("Operating System not supported")
+        raise RuntimeError("Operating system not supported")
 
     return path
 
+
 def create_config(path):
-    cwd = os.getcwd()
-    shutil.copyfile(f"{cwd}/config.yaml", syspath)
-    print(f"New config file created, edit config file at: {syspath}")
+    """
+    this will copy the currently used config file in the standard folder
+    """
+    syspath = default_config_path() + "/config.yaml"
+    shutil.copyfile(path, syspath)
+
 
 def load_config(path):
-    syspath = which_path() + "/config.yaml"
+    """
+    First checking "path" to match minimum length and other requirements.
 
-    if not os.path.exists(syspath):
-        create_config(syspath)
-
-    with open(f"{syspath}", 'r') as stream:
-        try:
+    Then it opens the specified config file and returns all keys which include token and UserId.
+    """
+    # opens specified file to retrieve config tokens
+    if isinstance(path, (pathlib.Path, str)):
+        assert path
+        with open(f"{path}", 'r') as stream:
             data = yaml.safe_load(stream)
-            #return list of dictionaries for all projects
+            # return list of dictionaries for all projects
             for value in data.values():
-                return(value)
-
-        except yaml.YAMLError as exc:
-            print(exc)
+                return (value)
+    else:
+        raise AssertionError

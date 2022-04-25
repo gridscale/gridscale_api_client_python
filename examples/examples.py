@@ -10,8 +10,6 @@ from gs_api_client import SyncGridscaleApiClient, GridscaleApiClient, models
 from gs_api_client import Configuration
 
 
-CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
-
 if __name__ == '__main__':
 
     # run `pip3 install index_by` before executing this file
@@ -20,9 +18,8 @@ if __name__ == '__main__':
     # api_config.debug = True
     api_config.host = 'https://api.gridscale.io'
 
-    #TODO: Change project
-    example_config = os.path.join(CURRENT_DIR, "config.yaml")
-    configfile = load_config(example_config)
+    #TODO: Change filename
+    configfile = load_config("config.yaml")
     api_config.api_key['X-Auth-Token'] = configfile[0].get("token")
     api_config.api_key['X-Auth-UserId'] = configfile[0].get("userId")
     api_config.debug = True
