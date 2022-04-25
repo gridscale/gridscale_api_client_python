@@ -32,8 +32,8 @@ def which_path():
 
 def create_config(path):
     cwd = os.getcwd()
-    shutil.copyfile(f"{cwd}/config.yaml", path)
-    print(f"New config file created, edit config file at: {path}")
+    shutil.copyfile(f"{cwd}/config.yaml", syspath)
+    print(f"New config file created, edit config file at: {syspath}")
 
 def load_config(path):
     syspath = which_path() + "/config.yaml"
