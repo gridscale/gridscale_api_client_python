@@ -26,7 +26,7 @@ def which_path():
         if not os.path.exists(path):
             os.makedirs(path)
     else:
-        "Operating System not supported"
+        print("Operating System not supported")
 
     return path
 
@@ -35,45 +35,18 @@ def create_config(path):
     shutil.copyfile(f"{cwd}/config.yaml", path)
     print(f"New config file created, edit config file at: {path}")
 
-def load_config(projectname, goal, path):
-    with open(f"{path}", 'r') as stream:
+def load_config(path):
+    syspath = which_path() + "/config.yaml"
+
+    if not os.path.exists(syspath):
+        create_config(syspath)
+
+    with open(f"{syspath}", 'r') as stream:
         try:
             data = yaml.safe_load(stream)
-
+            #return list of dictionaries for all projects
             for value in data.values():
-                for x in range(len(value)):
-                    result = value[x]
-                    #returns userID and token for the selected project
-                    if (result.get("name") == projectname):
-                        userid = result.get("userId")
-                        token = result.get("token")
+                return(value)
+
         except yaml.YAMLError as exc:
             print(exc)
-
-    if(goal == "id"):
-        return userid
-    elif(goal == "token"):
-        return token
-
-def load_token(project):
-    syspath = which_path() + "/config.yaml"
-    goal = "token"
-
-    # check if config file exists
-    if not os.path.exists(syspath):
-        create_config(syspath)
-        return load_config(project, goal, syspath)
-    else:
-        return load_config(project, goal, syspath)
-
-
-def load_userid(project):
-    syspath = which_path() + "/config.yaml"
-    goal = "id"
-
-    # check if config file exists
-    if not os.path.exists(syspath):
-        create_config(syspath)
-        return load_config(project, goal, syspath)
-    else:
-        return load_config(project, goal, syspath)
