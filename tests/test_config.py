@@ -1,4 +1,5 @@
 import os.path
+import shutil
 
 import pytest
 
@@ -29,6 +30,17 @@ def test_load_config_from_yaml():
     assert isinstance(res[0], dict)
     assert res[0]["name"] == "default"
     assert res[1]["name"] == "something-else"
+
+
+def test_load_config_works_without_fileext(tmp_path):
+    """Ensure load_config does not interpret file path or file name."""
+
+    example_config = os.path.join(CURRENT_DIR, "example-config.yaml")
+    dest = tmp_path / "a"
+    shutil.copyfile(example_config, dest)
+    res = load_config(dest)
+    assert isinstance(res, list)
+    assert len(res) == 2
 
 
 def test_load_config_handles_non_existing_file():
