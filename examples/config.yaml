@@ -1,0 +1,9 @@
+projects:
+- name: default
+  userId: user123
+  token: pass123
+  url: https://api.gridscale.io
+- name: something-else
+  userId: user456
+  token: pass456
+  url: https://api.gridscale.io
