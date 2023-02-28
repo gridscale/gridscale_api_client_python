@@ -13,7 +13,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='gs_api_client',
-    version='1.1.6',
+    version='2.1.0',
     description='Official Python idiomatic client for gridscale services',
     long_description=long_description,
     long_description_content_type="text/markdown",
