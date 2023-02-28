@@ -208,3 +208,4 @@ class SyncApiRequestDispatcher(ApiRequestDispatcherBase):
             self._result = self._response, self._response_code, self._response_headers
         else:
             self._result = self._response
+            

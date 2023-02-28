@@ -1,9 +1,11 @@
-from pprint import pprint
-from gs_api_client import Configuration
-from uuid import uuid4
 import sys
-from gs_api_client import SyncGridscaleApiClient, GridscaleApiClient, models
+
+from pprint import pprint
+from uuid import uuid4
 from index_by.key import index_by_key
+
+from gs_api_client import SyncGridscaleApiClient, GridscaleApiClient, models
+from gs_api_client import Configuration
 
 
 if __name__ == '__main__':
@@ -32,7 +34,7 @@ if __name__ == '__main__':
     get_templates_response = client.get_templates()
     templates = get_templates_response['templates'].values()
     template_by_name = index_by_key(templates, 'name')
-    template = template_by_name['Debian 9']
+    template = template_by_name['Debian 11']
 
     # create storage
     create_storage_response = client.create_storage({
