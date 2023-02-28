@@ -1,5 +1,8 @@
 # Changelog
 
+## [v2.1.0]
+- Fixing version
+
 ## [v1.1.6]
 - Modify the link to example
 
