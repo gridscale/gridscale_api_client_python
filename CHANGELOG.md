@@ -1,5 +1,8 @@
 # Changelog
 
+## [v1.1.6]
+- Modify the link to example
+
 ## [v1.1.5] 
 
 - Add get_certificates()
