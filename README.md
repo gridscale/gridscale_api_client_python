@@ -16,7 +16,7 @@ $ pip3 install gs_api_client
 
 First, you will need your [API credentials](https://my.gridscale.io/Easy/APIs/).
 
-In the [examples.py](examples/examples.py) replace the `AUTH_TOKEN` & `USER_UUID` with your credentials.
+In the [examples.py](https://github.com/gridscale/gridscale_api_client_python/blob/develop/examples/examples.py) replace the `AUTH_TOKEN` & `USER_UUID` with your credentials.
 
 ## Authentication
 
