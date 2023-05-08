@@ -1,5 +1,8 @@
 # Changelog
 
+## [v2.2.0]
+- Supporting a user_data in server for system configuration on first boot
+
 ## [v2.1.0]
 - Fixing version
 
