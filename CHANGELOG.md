@@ -1,5 +1,8 @@
 # Changelog
 
+## [v2.2.1]
+- Fixed error when getting a network
+
 ## [v2.2.0]
 - Supporting a user_data in server for system configuration on first boot
 
