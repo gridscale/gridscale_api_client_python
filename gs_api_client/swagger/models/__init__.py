@@ -430,6 +430,8 @@ from gs_api_client.swagger.models.usage_per_interval import UsagePerInterval
 from gs_api_client.swagger.models.usage_per_interval_inner import UsagePerIntervalInner
 from gs_api_client.swagger.models.vlansin_network import VlansinNetwork
 from gs_api_client.swagger.models.paas_service_metrics import PaasServiceMetrics
+from gs_api_client.swagger.models.paas_servicesin_network import PaasServicesinNetwork
+from gs_api_client.swagger.models.paas_servicesin_network_inner import PaasServicesinNetworkInner
 from gs_api_client.swagger.models.server_metrics import ServerMetrics
 from gs_api_client.swagger.models.backup_schedulesin_storage import BackupSchedulesinStorage
 from gs_api_client.swagger.models.backup_schedulesin_storage_inner import BackupSchedulesinStorageInner
