@@ -2,7 +2,9 @@ import sys
 
 from pprint import pprint
 from uuid import uuid4
+import os
 from index_by.key import index_by_key
+from configloader import load_config
 
 from gs_api_client import SyncGridscaleApiClient, GridscaleApiClient, models
 from gs_api_client import Configuration
@@ -16,11 +18,12 @@ if __name__ == '__main__':
     # api_config.debug = True
     api_config.host = 'https://api.gridscale.io'
 
-    #TODO: Insert your API token and User ID
-    api_config.api_key['X-Auth-Token'] = "AUTH_TOKEN"
-    api_config.api_key['X-Auth-UserId'] = "USER_UUID"
-    # api_config.debug = True
-    
+    #TODO: Change filename
+    configfile = load_config("config.yaml")
+    api_config.api_key['X-Auth-Token'] = configfile[0].get("token")
+    api_config.api_key['X-Auth-UserId'] = configfile[0].get("userId")
+    api_config.debug = True
+
     print('-' * 80)
     client = SyncGridscaleApiClient(configuration=api_config, http_info=False)
 

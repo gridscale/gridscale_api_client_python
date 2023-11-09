@@ -7,3 +7,4 @@ rope
 black
 pytest
 pytest-mock
+pyyaml
