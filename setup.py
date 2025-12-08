@@ -31,7 +31,7 @@ setup(
     package_dir={},
     packages=find_packages(exclude=['dist', 'examples']),
     install_requires=[
-        "urllib3 >= 1.15",
+        "urllib3>=1.15,<2.6.0",
         "six >= 1.10",
         "certifi",
         "python-dateutil",
